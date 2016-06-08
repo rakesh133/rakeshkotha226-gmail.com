@@ -1,0 +1,29 @@
+package gmailloginpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class testgmailclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//open Mozilla Firefox for browser
+		WebDriver d=new FirefoxDriver();
+		//open url
+		d.get("http://www.google.co.in");
+		//click on gmail link
+		d.findElement(By.xpath(".//*[@id='gbw']/div/div/div[1]/div[1]/a")).click();
+		//click on signin link
+		d.findElement(By.id("gb_70")).click();
+		//enter emailid in textbox
+		d.findElement(By.xpath(".//*[@id='Email']")).sendKeys("kotha143rakesh@gmail.com");
+		//click on next button
+		d.findElement(By.id("next")).click();
+		//enter password
+		d.findElement(By.id("Passwd")).sendKeys("rakesh");
+		//clickon signin button
+		d.findElement(By.id("signIn")).click();
+	}
+
+}
